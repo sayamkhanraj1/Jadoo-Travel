@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Vollkorn:wght@400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap');
 *{
     margin: 0; padding: 0; box-sizing: border-box;
 }
@@ -14,7 +14,18 @@ h1, h2, h3, h4, h5, h6{
     max-width: 1160px;
     margin: auto;
 }
-
+.section-intro{
+    text-align: center;
+}
+.section-intro p {
+    font-size: 18px;
+    font-weight: 700;
+}
+.section-intro h2{
+    font-size: 50px;
+    color: #14183E;
+    margin-bottom: 24px;
+}
 /* Navbar  */
 .nav-bar{
     display: flex;
@@ -43,15 +54,40 @@ h1, h2, h3, h4, h5, h6{
     display: flex;
     align-items: center;
     }
+ .intro-taxt{
+    max-width: 50%;
+    }
  .intro-taxt h1{
      color: #181E4B;
-     letter-spacing: -4%;
+     /* letter-spacing: -2%; */
      font-size: 84px;
      line-height: 1;
      font-weight: 700;
- }   
+ }  
+ .intro-taxt p{
+     font-size: 16px;
+     font-weight: 500;
+     color: #5E6282;
+     margin-bottom: 30px;
+ } 
+ .intro-taxt a{
+     width: 170px;
+     height: 60px;
+     background-color: #F1A501;
+     color: white;
+     box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+     border-radius: 10px;
+     text-decoration: none;
+     padding: 18px 27px;
+ }
  .intro-image img {
      width: 100%;
+ }
+ .highlight{
+     position: relative;
+ }
+ .highlight::after{
+     content: url('images/');
  }
 
 /* Hero section end*/
@@ -64,13 +100,14 @@ h1, h2, h3, h4, h5, h6{
  .categories{
      display: flex;
      justify-content: center;
+     flex-wrap: wrap;
  }
  .single-category{
      cursor: pointer;
      padding: 40px;
      margin: 16px 10px;
      border-radius: 36px;
-     width: 250px;
+     width: 240px;
      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.02);
 }
 .single-category:hover {
@@ -83,8 +120,11 @@ h1, h2, h3, h4, h5, h6{
 
 .destinations{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .single-destination{
+    max-width: 300px ;
     margin: 10px;
     border-radius: 24px;
     box-shadow: 0 100px 80px rgba(0, 0, 0, 0.1);
@@ -92,6 +132,8 @@ h1, h2, h3, h4, h5, h6{
 }
 .single-destination img {
     width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 .single-destination p{
  padding: 0 16px 10px;
@@ -109,3 +151,91 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
 }
 /* Brand section end */
+/* Subscribe section start  */
+.subscribe-scetion .container{
+    padding: 80px;
+    border-radius: 20px;
+    background: #DFD7F9 url('images/subscribe-decor-left.png');
+    
+}
+.subscribe-scetion h2 {
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+    margin: auto;
+}
+.input-group{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+.subscribe-scetion input{
+    padding: 15px 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+/* Subscribe section end  */
+/* Footer section start */
+.footer-contant{
+    display: flex;
+    padding: 40px 0;
+    justify-content: space-evenly;
+}
+#served{
+    text-align: center;
+}
+/* Footer section End */
+/* Media Quary strat  */
+
+@media screen and (max-width: 1440px) {
+    .container{
+        width: 80%;
+    }
+    
+}
+
+/* Tablet  */
+@media screen and (max-width: 1024px) {
+    .container{
+        width: 90%;
+        margin: auto;
+    }
+    .intro-taxt{
+        max-width: 100%;
+        }
+    .hero-section{
+        flex-direction: column-reverse;
+        margin-bottom: 50px;
+    }
+    .brands {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-manu{
+        display: none;
+    }
+}
+/* Mobile  */
+@media screen and (max-width: 688px) {
+    .intro-taxt{
+         width: 100%;
+     }
+    .intro-taxt h1 {
+         font-size: 54px;
+    }
+    .subscribe-scetion .container{
+        padding: 35px;
+    }
+    .subscribe-scetion h2{
+       width: 100%;
+     }
+     .footer-contant{
+         flex-direction: column;
+         text-align: center;
+     }
+     .nav-manu{
+        display: none;
+    }
+}
+
+/* Media Quary end */
